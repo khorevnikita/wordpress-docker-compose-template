@@ -38,7 +38,7 @@ services:
     container_name: webserver
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "${APP_PORT}:80"
     volumes:
       - ./wordpress:/var/www/html
       - ./nginx:/etc/nginx/conf.d
